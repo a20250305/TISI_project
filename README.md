@@ -29,6 +29,11 @@ This repository contains the core scripts and example datasets used for the deve
 - `FPKM_merged_MED12KO.txt`  
   Example processed expression matrix that can be directly used for TISI scoring and downstream biological validation analyses.
 
+- `Preprocessed raw counts matrix of 14 datasets_part1.csv`  
+- `Preprocessed raw counts matrix of 14 datasets_part2.csv`  
+- `Preprocessed raw counts matrix of 14 datasets_part3.csv`  
+
+  Full preprocessed raw count matrix used for TISI model development and evaluation. The matrix was split into three files due to GitHub file size limitations.
 ---
 
 ## System requirements
