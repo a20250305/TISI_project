@@ -1,0 +1,133 @@
+---
+title: "TISI_Human_Xenium_Plot_Only"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+# Setup
+```{r, warning=F, message=F}
+library(qs)
+library(Seurat)
+library(cytosignal)
+library(here)
+library(tidyverse)
+library(cowplot)
+options(timeout = 1200)
+load("C:/Users/winst/Documents/GitHub/TISI_Xenium_NatComm_2026/xo_for_manuscript.RData") # Insert file path here
+
+colors_orig <- c(
+  "dodgerblue2", "#E31A1C", # red
+  "green4",
+  "#6A3D9A", # purple
+  "#FF7F00", # orange
+  "cyan", "gold1",
+  "skyblue2", "#FB9A99", # lt pink
+  "palegreen2",
+  "#CAB2D6", # lt purple
+  "#FDBF6F", # lt orange
+  "gray70", "khaki2",
+  "maroon", "orchid1", "deeppink1", "blue1", "steelblue4",
+  "darkturquoise", "green1", "yellow4", "yellow3",
+  "darkorange4", "brown"
+)
+```
+
+# ImageDimPlot
+```{r warning=F, message=F}
+epihilo <- rownames(xo@meta.data[xo@meta.data$Ann3_TISI %in% c('Epi-TISIhi', 'Epi-TISIlo'), ])
+fb <- rownames(xo@meta.data[xo@meta.data$Ann3_TISI %in% c('Fibroblasts'), ])
+mye <- rownames(xo@meta.data[xo@meta.data$Ann3_TISI %in% c('Myeloid'), ])
+custom.colors <- c('Epi-TISIhi' = '#8B0000', 'Epi-TISIlo' = "#FFC9C9", 'Fibroblasts' = '#2E7D32', 'Myeloid' = '#0D47A1') 
+ImageDimPlot(
+  object = xo, 
+  group.by = 'Ann3_TISI', 
+  fov = names(xo@images)[1:2], 
+  cols = custom.colors, 
+  size = 1, 
+  axes = FALSE, 
+  flip_xy = FALSE, 
+  boundaries = 'segmentations', 
+  border.color = NA, 
+  cells = c(epihilo, fb, mye), 
+  dark.background = TRUE
+) &
+  aes(alpha = Ann3_TISI, fill = Ann3_TISI) &
+  scale_alpha_manual(
+    values = c('Epi-TISIhi' = 1, 'Epi-TISIlo' = 0.3, 'Fibroblasts' = 1, 'Myeloid' = 1),
+    guide = "none"
+  ) &
+  guides(fill = guide_legend(override.aes = list(alpha = 1))) &
+  labs(fill = "Annotation") &
+  theme(aspect.ratio = 1, panel.grid = element_blank())
+```
+
+# CytoSignal
+```{r, warning=F, message=F}
+cs_list <- readRDS("cytosignal_obj_list_3_rois.rds")
+rois <- c(
+  'Pre1_ROI_1', # Fig 6E
+  'Pre1_ROI_3', # Fig S3B
+  'Post3_ROI_1' # Fig S3C
+  )
+
+for(roi in names(cs_list)){
+  contIntrs <- showIntr(cs_list[[roi]], slot.use = "contact-Raw_smooth", signif.use = "result.spx", return.name = TRUE)
+  Intr <- c('FN1-CD44')
+  intr.use <- names(which(contIntrs == Intr))
+  custom.colors <- c('Epi-TISIhi' = '#8B0000', 'Epi-TISIlo' = "#FFC9C9", 'Fibroblasts' = '#2E7D32', 'Myeloid' = '#0D47A1')  
+  p1 <- plotEdge(cs_list[[roi]], 
+                 intr = intr.use, 
+                 edge.size = 500, 
+                 box = T,
+                 signif.use = 'result',
+                 pt.size = 0.2, 
+                 pt.sig.size = 0.3,
+                 use.phi = 30, # z rotation
+                 use.theta = 10, # xy-plane rotation
+                 pt.stroke = 0.2,
+                 slot.use = "contact-Raw_smooth", 
+                 colors.list = custom.colors,
+                 # plot.fmt = 'png', 
+                 # plot_dir = here('zoom'), 
+                 # filename = paste0(roi, '_', Intr, '.png'),
+                 return.plot = T)
+  print(p1)
+  
+  p2 <- ImageDimPlot(
+    object = xo, 
+    group.by = 'Ann3_TISI', 
+    fov = roi, 
+    cols = custom.colors, 
+    size = 1, 
+    axes = FALSE, 
+    flip_xy = FALSE, 
+    boundaries = 'segmentations', 
+    border.color = NA, 
+    cells = c(epihilo, fb, mye), 
+    dark.background = TRUE
+  ) +
+    aes(alpha = Ann3_TISI, fill = Ann3_TISI) +
+    scale_alpha_manual(
+      values = c('Epi-TISIhi' = 1, 'Epi-TISIlo' = 0.3, 'Fibroblasts' = 1, 'Myeloid' = 1),
+      guide = "none"
+    ) +
+    guides(fill = guide_legend(override.aes = list(alpha = 1))) +
+    labs(fill = "Annotation", title = roi) +
+    theme(aspect.ratio = 1, panel.grid = element_blank())
+  print(p2)
+}
+```
+
+# Niche Heatmap
+```{r warning=F, message=F}
+DefaultAssay(xo) <- 'niche'
+xo <- ScaleData(xo)
+Idents(xo) <- xo@meta.data[['Niches']]
+xo.sub <- subset(xo, downsample = min(table(xo@meta.data[['Niches']])))
+DoHeatmap(xo.sub, features = rownames(xo), group.by = 'Niches', angle = 1, hjust = 0.5, vjust = 0.5, group.colors = colors_orig) + scale_fill_distiller(type = 'seq', palette = 'Purples', direction = 1) + theme(aspect.ratio = 1) + NoLegend()
+```
+# Session Info
+```{r}
+sessionInfo()
+```
