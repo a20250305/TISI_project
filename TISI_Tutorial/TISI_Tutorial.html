@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="generator" content="litedown 0.8">
+<title>Applying the pretrained TISI model to RNA-seq data</title>
+<style type="text/css">
+body {
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 1.5;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+body, .abstract, code, .footnotes, footer, #refs, .caption { font-size: .9em; }
+li li { font-size: .95em; }
+ul:has(li > input[type="checkbox"]) { list-style: none; padding-left: 1em; }
+*, :before, :after { box-sizing: border-box; }
+a { color: steelblue; }
+pre, img { max-width: 100%; }
+pre { white-space: pre-wrap; word-break: break-word; }
+pre code { display: block; padding: 1em; overflow-x: auto; }
+code { font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace; }
+:not(pre, th) > code, code[class], div > .caption { background: #f8f8f8; }
+pre > code:is(:not([class]), .language-plain, .language-none, .plain), .box, .figure, .table { background: inherit; border: 1px solid #eee; }
+pre > code {
+  &.message { border-color: #9eeaf9; }
+  &.warning { background: #fff3cd; border-color: #fff3cd; }
+  &.error { background: #f8d7da; border-color: #f8d7da; }
+}
+.fenced-chunk { border-left: 1px solid #666; }
+.code-fence {
+  opacity: .4;
+  border: 1px dashed #666;
+  border-left: 2px solid;
+  &:hover { opacity: inherit; }
+}
+.box, .figure, .table, table { margin: 1em auto; }
+div > .caption { padding: 1px 1em; }
+.figure { p:has(img, svg), pre:has(svg) { text-align: center; } }
+.flex-col { display: flex; justify-content: space-between; }
+table {
+  &:only-child:not(.table > *) { margin: auto; }
+  th, td { padding: 5px; font-variant-numeric: tabular-nums; }
+  thead, tfoot, tr:nth-child(even) { background: whitesmoke; }
+  thead th { border-bottom: 1px solid #ddd; }
+  &:not(.datatable-table) {
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+  }
+}
+blockquote {
+  color: #666;
+  margin: 0;
+  padding: 1px 1em;
+  border-left: .5em solid #eee;
+}
+hr, .footnotes::before { border: 1px dashed #ddd; }
+.frontmatter { text-align: center; }
+#TOC {
+  a { text-decoration: none; }
+  ul { list-style: none; padding-left: 1em; }
+  & > ul { padding: 0; }
+  ul ul { border-left: 1px solid lightsteelblue; }
+}
+.body h2 { border-bottom: 1px solid #666; }
+.body .appendix, .appendix ~ h2 { border-bottom-style: dashed; }
+.main-number::after { content: "."; }
+span[class^="ref-number-"] { font-weight: bold; }
+.ref-number-fig::after, .ref-number-tab::after { content: ":"; }
+.cross-ref-chp::before { content: "Chapter "; }
+.cross-ref-sec::before { content: "Section "; }
+.cross-ref-fig::before, .ref-number-fig::before { content: "Figure "; }
+.cross-ref-tab::before, .ref-number-tab::before { content: "Table "; }
+.cross-ref-eqn::before, .MathJax_ref:has(mjx-mtext > mjx-c + mjx-c)::before { content: "Equation "; }
+.abstract, #refs {
+  &::before { display: block; margin: 1em auto; font-weight: bold; }
+}
+.abstract::before { content: "Abstract"; text-align: center; }
+#refs::before { content: "Bibliography"; font-size: 1.5em; }
+.ref-paren-open::before { content: "("; }
+.ref-paren-close::after { content: ")"; }
+.ref-semicolon::after { content: "; "; }
+.ref-and::after { content: " and "; }
+.ref-et-al::after { content: " et al."; font-style: italic; }
+.footnote-ref a {
+  &::before { content: "["; }
+  &::after { content: "]"; }
+}
+section.footnotes {
+  margin-top: 2em;
+  &::before { content: ""; display: block; max-width: 20em; }
+}
+.fade {
+  background: repeating-linear-gradient(135deg, white, white 30px, #ddd 32px, #ddd 32px);
+  opacity: 0.6;
+}
+
+@media print {
+  body { max-width: 100%; }
+  tr, img { break-inside: avoid; }
+}
+@media only screen and (min-width: 992px) {
+  body:not(.pagesjs) pre:has(.line-numbers):not(:hover) { white-space: pre; }
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xiee/utils/css/prism-xcode.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@xiee/utils/js/fold-details.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" defer></script>
+</head>
+<body>
+<div class="frontmatter">
+<div class="title"><h1>Applying the pretrained TISI model to RNA-seq data</h1></div>
+<div class="author"><h2>TISI project</h2></div>
+</div>
+<div class="body">
+<div id="TOC">
+<ul>
+<li><a href="#sec:1-requirements-and-installation">1. Requirements and installation</a></li>
+<li><a href="#sec:2-example-data-and-provenance">2. Example data and provenance</a></li>
+<li><a href="#sec:3-load-the-expression-matrix-and-pretrained-model">3. Load the expression matrix and pretrained model</a></li>
+<li><a href="#sec:4-preprocessing-and-tisi-calculation">4. Preprocessing and TISI calculation</a></li>
+<li><a href="#sec:5-regression-check-against-the-expected-scores">5. Regression check against the expected scores</a></li>
+<li><a href="#sec:6-visualize-and-export-the-example">6. Visualize and export the example</a></li>
+<li><a href="#sec:7-apply-tisi-to-your-own-bulk-rna-seq-data">7. Apply TISI to your own bulk RNA-seq data</a></li>
+<li><a href="#sec:8-scrna-seq-template-per-cell-scoring">8. scRNA-seq template (per-cell scoring)</a></li>
+<li><a href="#sec:9-troubleshooting">9. Troubleshooting</a></li>
+<li><a href="#sec:10-session-information">10. Session information</a></li>
+</ul>
+</div>
+<p>This tutorial calculates the pretrained Therapy-Induced Senescence Index (TISI)
+from a gene-by-sample RNA-seq expression matrix. It uses six GSE189764 samples:
+three CTL samples and three TIS persister samples.</p>
+<p>The tutorial performs inference with the pretrained L2=10 dot-product model. It
+does not retrain the model.</p>
+<h2 id="sec:1-requirements-and-installation">1. Requirements and installation</h2>
+<p>Run the following once in a fresh R installation. Seurat is optional and is
+only needed for the scRNA-seq template.</p>
+<pre><code class="language-r">install.packages(c(&quot;data.table&quot;, &quot;ggplot2&quot;, &quot;rmarkdown&quot;, &quot;knitr&quot;))
+
+if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE)) {
+  install.packages(&quot;BiocManager&quot;)
+}
+BiocManager::install(c(&quot;AnnotationDbi&quot;, &quot;org.Hs.eg.db&quot;))
+
+# Optional for a Seurat object:
+# install.packages(&quot;Seurat&quot;)
+</code></pre>
+<p>Render from this directory:</p>
+<pre><code class="language-r">rmarkdown::render(&quot;TISI_Tutorial.Rmd&quot;)
+</code></pre>
+<h2 id="sec:2-example-data-and-provenance">2. Example data and provenance</h2>
+<p>The example expression file is a compact subset of the author-provided
+GSE189764 normalized expression matrix. It retains all genes and only the six
+required samples. The matrix is oriented as <strong>genes x samples</strong>:</p>
+<ul>
+<li>the first column contains HGNC gene symbols;</li>
+<li>the remaining columns are C1, C2, C3, gT1, gT2, and gT3;</li>
+<li>the values are the normalized expression values used by the original RNA-seq
+validation pipeline, described there as normalized TPM input, not raw read
+counts;</li>
+<li>the original scoring pipeline then applies log2(x + 1e-5), column-wise scale(),
+and row-centering before the dot product.</li>
+</ul>
+<p>The sample annotation is supplied separately. The public GEO records identify
+C1-C3 as controls and gT1-gT3 as TIS persister samples. Exact GEO sample
+accessions are in the metadata file.</p>
+<pre><code class="language-r">suppressPackageStartupMessages({
+  library(data.table)
+  library(ggplot2)
+  library(AnnotationDbi)
+  library(org.Hs.eg.db)
+})
+
+knitr::opts_chunk$set(fig.path = &quot;knitr_assets/&quot;)
+
+dir.create(&quot;results&quot;, showWarnings = FALSE)
+dir.create(&quot;output_figures&quot;, showWarnings = FALSE)
+dir.create(&quot;knitr_assets&quot;, showWarnings = FALSE)
+
+expression_file &lt;- file.path(
+  &quot;example_data&quot;,
+  &quot;GSE189764_CTL_vs_TIS_expression.csv.gz&quot;
+)
+metadata_file &lt;- file.path(
+  &quot;example_data&quot;,
+  &quot;GSE189764_CTL_vs_TIS_metadata.csv&quot;
+)
+expected_file &lt;- file.path(
+  &quot;example_data&quot;,
+  &quot;GSE189764_CTL_vs_TIS_expected_TISI.csv&quot;
+)
+model_file &lt;- file.path(
+  &quot;model&quot;,
+  &quot;Step6_SenOCLR_L2_10_final_dot.rdata&quot;
+)
+
+stopifnot(
+  file.exists(expression_file),
+  file.exists(metadata_file),
+  file.exists(expected_file),
+  file.exists(model_file)
+)
+</code></pre>
+<pre><code class="language-r">metadata &lt;- fread(metadata_file)
+metadata
+</code></pre>
+<pre><code>##    sample_id condition source_group          source_note GEO_accession
+##       &lt;char&gt;    &lt;char&gt;       &lt;char&gt;               &lt;char&gt;        &lt;char&gt;
+## 1:        C1       CTL      Control              Control     GSE189764
+## 2:        C2       CTL      Control              Control     GSE189764
+## 3:        C3       CTL      Control              Control     GSE189764
+## 4:       gT1       TIS    Persister TIS persister sample     GSE189764
+## 5:       gT2       TIS    Persister TIS persister sample     GSE189764
+## 6:       gT3       TIS    Persister TIS persister sample     GSE189764
+##    GEO_sample_id                      source_expression_file
+##           &lt;char&gt;                                      &lt;char&gt;
+## 1:    GSM5706915 Benchmark_datasets/Raw_matrix/GSE189764.csv
+## 2:    GSM5706916 Benchmark_datasets/Raw_matrix/GSE189764.csv
+## 3:    GSM5706917 Benchmark_datasets/Raw_matrix/GSE189764.csv
+## 4:    GSM5706921 Benchmark_datasets/Raw_matrix/GSE189764.csv
+## 5:    GSM5706922 Benchmark_datasets/Raw_matrix/GSE189764.csv
+## 6:    GSM5706923 Benchmark_datasets/Raw_matrix/GSE189764.csv
+</code></pre>
+<p>There are exactly three samples in each group:</p>
+<pre><code class="language-r">stopifnot(nrow(metadata) == 6)
+stopifnot(all(table(metadata$condition) == 3))
+stopifnot(identical(
+  metadata$sample_id,
+  c(&quot;C1&quot;, &quot;C2&quot;, &quot;C3&quot;, &quot;gT1&quot;, &quot;gT2&quot;, &quot;gT3&quot;)
+))
+</code></pre>
+<h2 id="sec:3-load-the-expression-matrix-and-pretrained-model">3. Load the expression matrix and pretrained model</h2>
+<p>The pretrained model contains a named vector model$w, whose names are Ensembl
+gene identifiers without version suffixes. The example matrix contains gene
+symbols, so the same SYMBOL-to-ENSEMBL mapping used in the original validation
+code is applied below. If an input matrix already uses Ensembl IDs, remove
+version suffixes such as .12 before matching.</p>
+<pre><code class="language-r">expression_table &lt;- fread(expression_file)
+gene_column &lt;- names(expression_table)[1]
+sample_ids &lt;- setdiff(names(expression_table), gene_column)
+
+expression_matrix &lt;- as.matrix(
+  expression_table[, setdiff(names(expression_table), gene_column), with = FALSE]
+)
+storage.mode(expression_matrix) &lt;- &quot;numeric&quot;
+rownames(expression_matrix) &lt;- toupper(
+  trimws(as.character(expression_table[[gene_column]]))
+)
+
+stopifnot(identical(sample_ids, metadata$sample_id))
+stopifnot(all(is.finite(expression_matrix)))
+
+model_environment &lt;- new.env(parent = emptyenv())
+load(model_file, envir = model_environment)
+stopifnot(exists(&quot;SenOCLR_final&quot;, envir = model_environment, inherits = FALSE))
+tisi_model &lt;- model_environment$SenOCLR_final
+stopifnot(is.numeric(tisi_model$w), !is.null(names(tisi_model$w)))
+
+c(
+  input_genes = nrow(expression_matrix),
+  input_samples = ncol(expression_matrix),
+  model_genes = length(tisi_model$w)
+)
+</code></pre>
+<pre><code>##   input_genes input_samples   model_genes 
+##         38244             6         15729
+</code></pre>
+<h2 id="sec:4-preprocessing-and-tisi-calculation">4. Preprocessing and TISI calculation</h2>
+<p>The functions below reproduce the inference steps used in the original RNA-seq
+validation code. They do not retrain the model.</p>
+<p>Duplicate input genes are averaged before identifier matching. Genes that are
+not in the pretrained model are omitted from the dot product. The score is
+therefore based on the intersection of the input genes and the named model
+weights.</p>
+<pre><code class="language-r">collapse_duplicate_rows &lt;- function(mat) {
+  groups &lt;- split(seq_len(nrow(mat)), rownames(mat))
+  if (all(lengths(groups) == 1L)) {
+    return(mat)
+  }
+
+  collapsed &lt;- t(vapply(
+    groups,
+    function(i) colMeans(mat[i, , drop = FALSE], na.rm = TRUE),
+    numeric(ncol(mat))
+  ))
+  colnames(collapsed) &lt;- colnames(mat)
+  rownames(collapsed) &lt;- names(groups)
+  collapsed
+}
+
+prepare_model_matrix &lt;- function(mat, model) {
+  mat &lt;- as.matrix(mat)
+  storage.mode(mat) &lt;- &quot;numeric&quot;
+  ids &lt;- toupper(trimws(rownames(mat)))
+  rownames(mat) &lt;- ids
+  mat &lt;- collapse_duplicate_rows(mat)
+
+  ensembl_fraction &lt;- mean(grepl(&quot;^ENSG[0-9]+$&quot;, rownames(mat)))
+
+  if (ensembl_fraction &gt; 0.5) {
+    rownames(mat) &lt;- sub(&quot;\\.[0-9]+$&quot;, &quot;&quot;, rownames(mat))
+    mat &lt;- collapse_duplicate_rows(mat)
+    mat &lt;- mat[!duplicated(rownames(mat)), , drop = FALSE]
+    return(mat)
+  }
+
+  mapping &lt;- AnnotationDbi::select(
+    x = org.Hs.eg.db,
+    keys = rownames(mat),
+    keytype = &quot;SYMBOL&quot;,
+    columns = &quot;ENSEMBL&quot;
+  )
+  mapping &lt;- mapping[!is.na(mapping$ENSEMBL), , drop = FALSE]
+  mapping &lt;- mapping[!duplicated(mapping$SYMBOL), , drop = FALSE]
+  mapping &lt;- mapping[!duplicated(mapping$ENSEMBL), , drop = FALSE]
+
+  genes_to_keep &lt;- intersect(mapping$SYMBOL, rownames(mat))
+  if (length(genes_to_keep) == 0L) {
+    stop(&quot;No input genes could be matched to the model identifiers.&quot;)
+  }
+
+  mat &lt;- mat[genes_to_keep, , drop = FALSE]
+  rownames(mat) &lt;- mapping$ENSEMBL[match(rownames(mat), mapping$SYMBOL)]
+  mat
+}
+
+normalize_exp &lt;- function(x) {
+  x_log &lt;- log2(x + 0.00001)
+  x_scaled &lt;- scale(x_log)
+  row_means &lt;- rowMeans(x_scaled, na.rm = TRUE)
+  x_scaled - matrix(
+    row_means,
+    nrow = nrow(x_scaled),
+    ncol = ncol(x_scaled),
+    byrow = FALSE
+  )
+}
+
+scoreOCLR &lt;- function(profile, model, m = &quot;dot&quot;) {
+  weights &lt;- model$w
+  genes &lt;- intersect(names(weights), rownames(profile))
+  if (length(genes) == 0L) {
+    stop(&quot;No model genes are present in the expression matrix.&quot;)
+  }
+
+  weights &lt;- weights[genes]
+  profile_mat &lt;- as.matrix(profile[genes, , drop = FALSE])
+
+  if (m != &quot;dot&quot;) {
+    stop(&quot;This tutorial uses the pretrained dot-product TISI model.&quot;)
+  }
+
+  list(apply(profile_mat, 2, function(x) weights %*% x))
+}
+
+minmax &lt;- function(x) {
+  value_range &lt;- range(x, na.rm = TRUE)
+  if (diff(value_range) == 0) {
+    return(rep(0.5, length(x)))
+  }
+  (x - value_range[1]) / diff(value_range)
+}
+
+calculate_tisi &lt;- function(expression_matrix, model) {
+  expression_for_model &lt;- prepare_model_matrix(expression_matrix, model)
+  normalized_matrix &lt;- normalize_exp(expression_for_model)
+  raw_score &lt;- as.numeric(scoreOCLR(
+    normalized_matrix,
+    model,
+    m = &quot;dot&quot;
+  )[[1]])
+
+  list(
+    scores = data.frame(
+      sample_id = colnames(expression_for_model),
+      TISI_raw = raw_score,
+      TISI_scaled = minmax(raw_score),
+      row.names = NULL,
+      check.names = FALSE
+    ),
+    n_input_genes = nrow(expression_for_model),
+    n_model_genes_used = length(intersect(
+      names(model$w),
+      rownames(expression_for_model)
+    ))
+  )
+}
+</code></pre>
+<p>Run the calculation and inspect model coverage:</p>
+<pre><code class="language-r">calculation &lt;- calculate_tisi(expression_matrix, tisi_model)
+</code></pre>
+<pre><code>## 'select()' returned 1:many mapping between keys and columns
+</code></pre>
+<pre><code class="language-r">scores &lt;- as.data.table(calculation$scores)
+scores &lt;- merge(
+  metadata[, .(sample_id, condition)],
+  scores,
+  by = &quot;sample_id&quot;,
+  sort = FALSE
+)
+scores &lt;- scores[match(metadata$sample_id, sample_id)]
+
+print(scores)
+</code></pre>
+<pre><code>##    sample_id condition   TISI_raw TISI_scaled
+##       &lt;char&gt;    &lt;char&gt;      &lt;num&gt;       &lt;num&gt;
+## 1:        C1       CTL -0.5767705  0.09661579
+## 2:        C2       CTL -0.7151567  0.00000000
+## 3:        C3       CTL -0.6562327  0.04113842
+## 4:       gT1       TIS  0.5627462  0.89218183
+## 5:       gT2       TIS  0.7171779  1.00000000
+## 6:       gT3       TIS  0.6682358  0.96583049
+</code></pre>
+<pre><code class="language-r">cat(&quot;Input genes after preprocessing:&quot;, calculation$n_input_genes, &quot;\n&quot;)
+</code></pre>
+<pre><code>## Input genes after preprocessing: 22345
+</code></pre>
+<pre><code class="language-r">cat(&quot;Model genes used:&quot;, calculation$n_model_genes_used, &quot;of&quot;,
+    length(tisi_model$w), &quot;\n&quot;)
+</code></pre>
+<pre><code>## Model genes used: 15038 of 15729
+</code></pre>
+<pre><code class="language-r">fwrite(scores, file.path(&quot;results&quot;, &quot;GSE189764_TISI_scores.csv&quot;))
+</code></pre>
+<p>TISI_raw is the weighted dot product. TISI_scaled is the 0-to-1 min-max
+transformation used for the example. A higher score indicates a more TISI-like
+transcriptional state relative to the samples being scaled; it is not a
+probability and is not a universal clinical cutoff.</p>
+<h2 id="sec:5-regression-check-against-the-expected-scores">5. Regression check against the expected scores</h2>
+<p>The checked-in expected-results file was generated from the same six-sample
+matrix, the same pretrained model, and the same scoring functions above.</p>
+<pre><code class="language-r">expected &lt;- fread(expected_file)
+expected &lt;- expected[match(scores$sample_id, sample_id)]
+
+stopifnot(identical(scores$sample_id, expected$sample_id))
+max_abs_error &lt;- max(abs(
+  scores$TISI_scaled - expected$TISI_scaled
+))
+stopifnot(max_abs_error &lt;= 1e-10)
+
+cat(&quot;Maximum absolute error:&quot;, format(max_abs_error, scientific = TRUE), &quot;\n&quot;)
+</code></pre>
+<pre><code>## Maximum absolute error: 4.440892e-16
+</code></pre>
+<p><strong>Important reproducibility note.</strong> The original Figure 2E analysis scored all
+12 GSE189764 samples before selecting the six displayed samples. Because the
+original normalization and min-max scaling depend on the columns included in a
+calculation, the six-sample tutorial values are expected to differ slightly
+from the six Figure 2E values. The tutorial deliberately uses exactly six
+shipped samples so that a new user can run the example without hidden samples;
+the algorithm and pretrained weights are unchanged. To reproduce Figure 2E
+numerically, run the same functions on the complete 12-sample matrix.</p>
+<h2 id="sec:6-visualize-and-export-the-example">6. Visualize and export the example</h2>
+<p>With three biological replicates per group, the individual points are shown
+explicitly.</p>
+<pre><code class="language-r">scores[, condition := factor(
+  condition,
+  levels = c(&quot;CTL&quot;, &quot;TIS&quot;)
+)]
+
+tisi_plot &lt;- ggplot(scores, aes(condition, TISI_scaled, fill = condition)) +
+  geom_boxplot(width = 0.55, outlier.shape = NA, alpha = 0.35) +
+  geom_jitter(width = 0.08, size = 3.2, shape = 21, color = &quot;black&quot;) +
+  scale_fill_manual(values = c(
+    &quot;CTL&quot; = &quot;#0072B2&quot;,
+    &quot;TIS&quot; = &quot;#D55E00&quot;
+  )) +
+  labs(
+    x = NULL,
+    y = &quot;TISI (min-max scaled)&quot;,
+    title = &quot;GSE189764: CTL versus TIS&quot;
+  ) +
+  theme_classic(base_size = 14) +
+  theme(
+    legend.position = &quot;none&quot;,
+    axis.text.x = element_text(angle = 20, hjust = 1),
+    plot.title = element_text(face = &quot;bold&quot;, hjust = 0.5)
+  )
+
+ggsave(
+  file.path(&quot;output_figures&quot;, &quot;GSE189764_CTL_vs_TIS_TISI.pdf&quot;),
+  tisi_plot,
+  width = 5.2,
+  height = 4.4,
+  units = &quot;in&quot;,
+  device = &quot;pdf&quot;
+)
+tisi_plot
+</code></pre>
+<p><img src="data:image/png;base64,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" alt="plot of chunk plot" /></p>
+<h2 id="sec:7-apply-tisi-to-your-own-bulk-rna-seq-data">7. Apply TISI to your own bulk RNA-seq data</h2>
+<p>Replace expression_file with a gene-by-sample matrix containing either HGNC
+symbols or Ensembl IDs. For Ensembl IDs, remove version suffixes such as .12.
+Use the same expression scale expected by the original pipeline and do not
+apply an additional log transformation before calling calculate_tisi().</p>
+<pre><code class="language-r">user_table &lt;- fread(&quot;path/to/my_normalized_expression.csv&quot;)
+gene_column &lt;- names(user_table)[1]
+user_matrix &lt;- as.matrix(
+  user_table[, setdiff(names(user_table), gene_column), with = FALSE]
+)
+storage.mode(user_matrix) &lt;- &quot;numeric&quot;
+rownames(user_matrix) &lt;- user_table[[gene_column]]
+
+user_result &lt;- calculate_tisi(user_matrix, tisi_model)
+fwrite(user_result$scores, &quot;my_TISI_scores.csv&quot;)
+</code></pre>
+<p>Check the number of matched model genes before interpreting results. A very low
+coverage means that the score is based on only a small part of the model. Do
+not compare min-max-scaled scores from unrelated datasets as if they were on a
+common absolute scale; retain and report TISI_raw as well.</p>
+<h2 id="sec:8-scrna-seq-template-per-cell-scoring">8. scRNA-seq template (per-cell scoring)</h2>
+<p>The same inference implementation can score a gene-by-cell matrix, so scores
+are calculated <strong>per cell</strong> when cells are columns. The original scRNA-seq
+workflow uses the same gene matching, log2(x + 1e-5), scaling, centering, and
+dot product. It is not necessary to pseudobulk unless the scientific question
+requires sample-level scores.</p>
+<p>For a Seurat object, use the assay layer that corresponds to the input scale
+expected by the original workflow. The code below uses the raw-count layer so
+that the tutorial performs the documented log transformation. The conversion
+to a dense matrix follows the existing implementation and can require
+substantial memory for large datasets.</p>
+<pre><code class="language-r">library(SeuratObject)
+
+# seurat_object is an existing Seurat object.
+cell_matrix &lt;- SeuratObject::GetAssayData(
+  seurat_object,
+  assay = &quot;RNA&quot;,
+  layer = &quot;counts&quot;
+)
+
+cell_result &lt;- calculate_tisi(cell_matrix, tisi_model)
+seurat_object$TISI_raw &lt;- cell_result$scores$TISI_raw
+seurat_object$TISI_scaled &lt;- cell_result$scores$TISI_scaled
+</code></pre>
+<p>For very large sparse datasets, score cells in batches or use pseudobulk
+profiles after validating that the same preprocessing and gene-ID convention
+are preserved. The model does not produce a probability, cell type, or clinical
+threshold automatically; downstream grouping requires an explicitly reported
+rule.</p>
+<h2 id="sec:9-troubleshooting">9. Troubleshooting</h2>
+<ul>
+<li><strong>Wrong orientation:</strong> the input must have genes in rows and samples/cells in
+columns.</li>
+<li><strong>Wrong identifiers:</strong> use HGNC symbols or Ensembl IDs. Ensembl version
+suffixes are removed; other identifier systems require an explicit mapping.</li>
+<li><strong>Duplicate genes:</strong> duplicate rows are averaged before matching.</li>
+<li><strong>Missing genes:</strong> unmatched genes are omitted. Inspect model coverage and
+report it with the scores.</li>
+<li><strong>Missing values:</strong> remove or resolve non-finite expression values before
+scoring; the dot product is not defined for NA, NaN, or Inf values.</li>
+<li><strong>Normalization mismatch:</strong> do not treat raw counts, TPM, already log2 values,
+and Seurat normalized values as interchangeable. Match the transformation
+used by the original pipeline.</li>
+<li><strong>No matched genes:</strong> install AnnotationDbi and org.Hs.eg.db, or provide
+Ensembl IDs that match the model.</li>
+</ul>
+<h2 id="sec:10-session-information">10. Session information</h2>
+<pre><code class="language-r">capture.output(sessionInfo(), file = file.path(&quot;results&quot;, &quot;sessionInfo.txt&quot;))
+sessionInfo()
+</code></pre>
+<pre><code>## R version 4.5.1 (2025-06-13)
+## Platform: aarch64-apple-darwin20
+## Running under: macOS Tahoe 26.1
+## 
+## Matrix products: default
+## BLAS:   /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRblas.0.dylib 
+## LAPACK: /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+## 
+## locale:
+## [1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8
+## 
+## time zone: America/Chicago
+## tzcode source: internal
+## 
+## attached base packages:
+## [1] stats4    stats     graphics  grDevices utils     datasets  methods  
+## [8] base     
+## 
+## other attached packages:
+## [1] org.Hs.eg.db_3.22.0  AnnotationDbi_1.72.0 IRanges_2.44.0      
+## [4] S4Vectors_0.48.0     Biobase_2.70.0       BiocGenerics_0.56.0 
+## [7] generics_0.1.4       ggplot2_4.0.0        data.table_1.17.8   
+## 
+## loaded via a namespace (and not attached):
+##  [1] RSQLite_2.4.3      magrittr_2.0.4     evaluate_1.0.5     grid_4.5.1        
+##  [5] RColorBrewer_1.1-3 fastmap_1.2.0      blob_1.2.4         R.oo_1.27.1       
+##  [9] R.utils_2.13.0     DBI_1.2.3          httr_1.4.7         scales_1.4.0      
+## [13] Biostrings_2.78.0  textshaping_1.0.4  cli_3.6.5          rlang_1.1.6       
+## [17] crayon_1.5.3       XVector_0.50.0     R.methodsS3_1.8.2  bit64_4.6.0-1     
+## [21] yaml_2.3.10        withr_3.0.2        cachem_1.1.0       tools_4.5.1       
+## [25] memoise_2.0.1      dplyr_1.1.4        vctrs_0.6.5        R6_2.6.1          
+## [29] png_0.1-8          lifecycle_1.0.4    KEGGREST_1.50.0    Seqinfo_1.0.0     
+## [33] bit_4.6.0          ragg_1.5.0         pkgconfig_2.0.3    pillar_1.11.1     
+## [37] gtable_0.3.6       glue_1.8.0         systemfonts_1.3.1  xfun_0.54         
+## [41] tibble_3.3.0       tidyselect_1.2.1   knitr_1.50         dichromat_2.0-0.1 
+## [45] farver_2.1.2       labeling_0.4.3     compiler_4.5.1     S7_0.2.0
+</code></pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+sample_id,condition,source_group,source_note,GEO_accession,GEO_sample_id,source_expression_file
+C1,CTL,Control,Control,GSE189764,GSM5706915,Benchmark_datasets/Raw_matrix/GSE189764.csv
+C2,CTL,Control,Control,GSE189764,GSM5706916,Benchmark_datasets/Raw_matrix/GSE189764.csv
+C3,CTL,Control,Control,GSE189764,GSM5706917,Benchmark_datasets/Raw_matrix/GSE189764.csv
+gT1,TIS,Persister,TIS persister sample,GSE189764,GSM5706921,Benchmark_datasets/Raw_matrix/GSE189764.csv
+gT2,TIS,Persister,TIS persister sample,GSE189764,GSM5706922,Benchmark_datasets/Raw_matrix/GSE189764.csv
+gT3,TIS,Persister,TIS persister sample,GSE189764,GSM5706923,Benchmark_datasets/Raw_matrix/GSE189764.csv
