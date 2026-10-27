@@ -1,0 +1,197 @@
+sample_id,stage,tisi_group,sender,receiver,sender_label,receiver_label,weight,log1p_weight
+20220401-2_8,TAC 12d,High,Tumor_cells,Tumor_cells,Tumor cells,Tumor cells,773.433590692292,6.65213191143214
+20220401-2_8,TAC 12d,High,Macrophages,Tumor_cells,Macrophages,Tumor cells,559.606535502071,6.32901929671138
+20220401-2_8,TAC 12d,High,Endothelial_cells,Tumor_cells,Endothelial,Tumor cells,0,0
+20220401-2_8,TAC 12d,High,Fibroblasts,Tumor_cells,Fibroblasts,Tumor cells,4.32993254544123,1.67333858245813
+20220401-2_8,TAC 12d,High,T_cells,Tumor_cells,T cells,Tumor cells,1.33712268385947,0.848920550481564
+20220401-2_8,TAC 12d,High,Dendritic_cells,Tumor_cells,DC cells,Tumor cells,0,0
+20220401-2_8,TAC 12d,High,B_cells,Tumor_cells,B cells,Tumor cells,0,0
+20220401-2_8,TAC 12d,High,Tumor_cells,Macrophages,Tumor cells,Macrophages,516.011847093827,6.24806578932098
+20220401-2_8,TAC 12d,High,Macrophages,Macrophages,Macrophages,Macrophages,735.152066558771,6.60143670955976
+20220401-2_8,TAC 12d,High,Endothelial_cells,Macrophages,Endothelial,Macrophages,0,0
+20220401-2_8,TAC 12d,High,Fibroblasts,Macrophages,Fibroblasts,Macrophages,125.927145248577,4.84361326239303
+20220401-2_8,TAC 12d,High,T_cells,Macrophages,T cells,Macrophages,59.5055673153503,4.10273538254438
+20220401-2_8,TAC 12d,High,Dendritic_cells,Macrophages,DC cells,Macrophages,0,0
+20220401-2_8,TAC 12d,High,B_cells,Macrophages,B cells,Macrophages,0,0
+20220401-2_8,TAC 12d,High,Tumor_cells,Endothelial_cells,Tumor cells,Endothelial,0,0
+20220401-2_8,TAC 12d,High,Macrophages,Endothelial_cells,Macrophages,Endothelial,0,0
+20220401-2_8,TAC 12d,High,Endothelial_cells,Endothelial_cells,Endothelial,Endothelial,0,0
+20220401-2_8,TAC 12d,High,Fibroblasts,Endothelial_cells,Fibroblasts,Endothelial,0,0
+20220401-2_8,TAC 12d,High,T_cells,Endothelial_cells,T cells,Endothelial,0,0
+20220401-2_8,TAC 12d,High,Dendritic_cells,Endothelial_cells,DC cells,Endothelial,0,0
+20220401-2_8,TAC 12d,High,B_cells,Endothelial_cells,B cells,Endothelial,0,0
+20220401-2_8,TAC 12d,High,Tumor_cells,Fibroblasts,Tumor cells,Fibroblasts,4.90632290317196,1.77602345557793
+20220401-2_8,TAC 12d,High,Macrophages,Fibroblasts,Macrophages,Fibroblasts,82.233529624588,4.42165026693988
+20220401-2_8,TAC 12d,High,Endothelial_cells,Fibroblasts,Endothelial,Fibroblasts,0,0
+20220401-2_8,TAC 12d,High,Fibroblasts,Fibroblasts,Fibroblasts,Fibroblasts,12.8478817484984,2.62813227858979
+20220401-2_8,TAC 12d,High,T_cells,Fibroblasts,T cells,Fibroblasts,0,0
+20220401-2_8,TAC 12d,High,Dendritic_cells,Fibroblasts,DC cells,Fibroblasts,0,0
+20220401-2_8,TAC 12d,High,B_cells,Fibroblasts,B cells,Fibroblasts,0,0
+20220401-2_8,TAC 12d,High,Tumor_cells,T_cells,Tumor cells,T cells,1.33712268385947,0.848920550481564
+20220401-2_8,TAC 12d,High,Macrophages,T_cells,Macrophages,T cells,67.6226585137714,4.22862277922969
+20220401-2_8,TAC 12d,High,Endothelial_cells,T_cells,Endothelial,T cells,0,0
+20220401-2_8,TAC 12d,High,Fibroblasts,T_cells,Fibroblasts,T cells,0,0
+20220401-2_8,TAC 12d,High,T_cells,T_cells,T cells,T cells,7.12641692540371,2.09512010383041
+20220401-2_8,TAC 12d,High,Dendritic_cells,T_cells,DC cells,T cells,0,0
+20220401-2_8,TAC 12d,High,B_cells,T_cells,B cells,T cells,0,0
+20220401-2_8,TAC 12d,High,Tumor_cells,Dendritic_cells,Tumor cells,DC cells,0,0
+20220401-2_8,TAC 12d,High,Macrophages,Dendritic_cells,Macrophages,DC cells,0,0
+20220401-2_8,TAC 12d,High,Endothelial_cells,Dendritic_cells,Endothelial,DC cells,0,0
+20220401-2_8,TAC 12d,High,Fibroblasts,Dendritic_cells,Fibroblasts,DC cells,0,0
+20220401-2_8,TAC 12d,High,T_cells,Dendritic_cells,T cells,DC cells,0,0
+20220401-2_8,TAC 12d,High,Dendritic_cells,Dendritic_cells,DC cells,DC cells,0,0
+20220401-2_8,TAC 12d,High,B_cells,Dendritic_cells,B cells,DC cells,0,0
+20220401-2_8,TAC 12d,High,Tumor_cells,B_cells,Tumor cells,B cells,0,0
+20220401-2_8,TAC 12d,High,Macrophages,B_cells,Macrophages,B cells,0,0
+20220401-2_8,TAC 12d,High,Endothelial_cells,B_cells,Endothelial,B cells,0,0
+20220401-2_8,TAC 12d,High,Fibroblasts,B_cells,Fibroblasts,B cells,0,0
+20220401-2_8,TAC 12d,High,T_cells,B_cells,T cells,B cells,0,0
+20220401-2_8,TAC 12d,High,Dendritic_cells,B_cells,DC cells,B cells,0,0
+20220401-2_8,TAC 12d,High,B_cells,B_cells,B cells,B cells,0,0
+20221010-1_1,Primary,Low,Tumor_cells,Tumor_cells,Tumor cells,Tumor cells,1401.61027159576,7.24609025932978
+20221010-1_1,Primary,Low,Macrophages,Tumor_cells,Macrophages,Tumor cells,0,0
+20221010-1_1,Primary,Low,Endothelial_cells,Tumor_cells,Endothelial,Tumor cells,0,0
+20221010-1_1,Primary,Low,Fibroblasts,Tumor_cells,Fibroblasts,Tumor cells,32.9723988516832,3.52554839644943
+20221010-1_1,Primary,Low,T_cells,Tumor_cells,T cells,Tumor cells,0,0
+20221010-1_1,Primary,Low,Dendritic_cells,Tumor_cells,DC cells,Tumor cells,0,0
+20221010-1_1,Primary,Low,B_cells,Tumor_cells,B cells,Tumor cells,0,0
+20221010-1_1,Primary,Low,Tumor_cells,Macrophages,Tumor cells,Macrophages,0,0
+20221010-1_1,Primary,Low,Macrophages,Macrophages,Macrophages,Macrophages,0,0
+20221010-1_1,Primary,Low,Endothelial_cells,Macrophages,Endothelial,Macrophages,0,0
+20221010-1_1,Primary,Low,Fibroblasts,Macrophages,Fibroblasts,Macrophages,0,0
+20221010-1_1,Primary,Low,T_cells,Macrophages,T cells,Macrophages,0,0
+20221010-1_1,Primary,Low,Dendritic_cells,Macrophages,DC cells,Macrophages,0,0
+20221010-1_1,Primary,Low,B_cells,Macrophages,B cells,Macrophages,0,0
+20221010-1_1,Primary,Low,Tumor_cells,Endothelial_cells,Tumor cells,Endothelial,0,0
+20221010-1_1,Primary,Low,Macrophages,Endothelial_cells,Macrophages,Endothelial,0,0
+20221010-1_1,Primary,Low,Endothelial_cells,Endothelial_cells,Endothelial,Endothelial,0,0
+20221010-1_1,Primary,Low,Fibroblasts,Endothelial_cells,Fibroblasts,Endothelial,0,0
+20221010-1_1,Primary,Low,T_cells,Endothelial_cells,T cells,Endothelial,0,0
+20221010-1_1,Primary,Low,Dendritic_cells,Endothelial_cells,DC cells,Endothelial,0,0
+20221010-1_1,Primary,Low,B_cells,Endothelial_cells,B cells,Endothelial,0,0
+20221010-1_1,Primary,Low,Tumor_cells,Fibroblasts,Tumor cells,Fibroblasts,23.4692644680056,3.19741781848241
+20221010-1_1,Primary,Low,Macrophages,Fibroblasts,Macrophages,Fibroblasts,0,0
+20221010-1_1,Primary,Low,Endothelial_cells,Fibroblasts,Endothelial,Fibroblasts,0,0
+20221010-1_1,Primary,Low,Fibroblasts,Fibroblasts,Fibroblasts,Fibroblasts,0.39147455992826,0.330364019336093
+20221010-1_1,Primary,Low,T_cells,Fibroblasts,T cells,Fibroblasts,0,0
+20221010-1_1,Primary,Low,Dendritic_cells,Fibroblasts,DC cells,Fibroblasts,0,0
+20221010-1_1,Primary,Low,B_cells,Fibroblasts,B cells,Fibroblasts,0,0
+20221010-1_1,Primary,Low,Tumor_cells,T_cells,Tumor cells,T cells,0,0
+20221010-1_1,Primary,Low,Macrophages,T_cells,Macrophages,T cells,0,0
+20221010-1_1,Primary,Low,Endothelial_cells,T_cells,Endothelial,T cells,0,0
+20221010-1_1,Primary,Low,Fibroblasts,T_cells,Fibroblasts,T cells,0,0
+20221010-1_1,Primary,Low,T_cells,T_cells,T cells,T cells,0,0
+20221010-1_1,Primary,Low,Dendritic_cells,T_cells,DC cells,T cells,0,0
+20221010-1_1,Primary,Low,B_cells,T_cells,B cells,T cells,0,0
+20221010-1_1,Primary,Low,Tumor_cells,Dendritic_cells,Tumor cells,DC cells,0,0
+20221010-1_1,Primary,Low,Macrophages,Dendritic_cells,Macrophages,DC cells,0,0
+20221010-1_1,Primary,Low,Endothelial_cells,Dendritic_cells,Endothelial,DC cells,0,0
+20221010-1_1,Primary,Low,Fibroblasts,Dendritic_cells,Fibroblasts,DC cells,0,0
+20221010-1_1,Primary,Low,T_cells,Dendritic_cells,T cells,DC cells,0,0
+20221010-1_1,Primary,Low,Dendritic_cells,Dendritic_cells,DC cells,DC cells,0,0
+20221010-1_1,Primary,Low,B_cells,Dendritic_cells,B cells,DC cells,0,0
+20221010-1_1,Primary,Low,Tumor_cells,B_cells,Tumor cells,B cells,0,0
+20221010-1_1,Primary,Low,Macrophages,B_cells,Macrophages,B cells,0,0
+20221010-1_1,Primary,Low,Endothelial_cells,B_cells,Endothelial,B cells,0,0
+20221010-1_1,Primary,Low,Fibroblasts,B_cells,Fibroblasts,B cells,0,0
+20221010-1_1,Primary,Low,T_cells,B_cells,T cells,B cells,0,0
+20221010-1_1,Primary,Low,Dendritic_cells,B_cells,DC cells,B cells,0,0
+20221010-1_1,Primary,Low,B_cells,B_cells,B cells,B cells,0,0
+20221010-2_6,TAC 7d,Low,Tumor_cells,Tumor_cells,Tumor cells,Tumor cells,1202.68476821464,7.09314277116808
+20221010-2_6,TAC 7d,Low,Macrophages,Tumor_cells,Macrophages,Tumor cells,320.950575693681,5.77439804212883
+20221010-2_6,TAC 7d,Low,Endothelial_cells,Tumor_cells,Endothelial,Tumor cells,0,0
+20221010-2_6,TAC 7d,Low,Fibroblasts,Tumor_cells,Fibroblasts,Tumor cells,2.58992081205216,1.27813014433272
+20221010-2_6,TAC 7d,Low,T_cells,Tumor_cells,T cells,Tumor cells,0,0
+20221010-2_6,TAC 7d,Low,Dendritic_cells,Tumor_cells,DC cells,Tumor cells,0,0
+20221010-2_6,TAC 7d,Low,B_cells,Tumor_cells,B cells,Tumor cells,0,0
+20221010-2_6,TAC 7d,Low,Tumor_cells,Macrophages,Tumor cells,Macrophages,299.056605489876,5.70397114182369
+20221010-2_6,TAC 7d,Low,Macrophages,Macrophages,Macrophages,Macrophages,253.777247906405,5.54038962578016
+20221010-2_6,TAC 7d,Low,Endothelial_cells,Macrophages,Endothelial,Macrophages,0,0
+20221010-2_6,TAC 7d,Low,Fibroblasts,Macrophages,Fibroblasts,Macrophages,30.8438716598456,3.46084495094078
+20221010-2_6,TAC 7d,Low,T_cells,Macrophages,T cells,Macrophages,0,0
+20221010-2_6,TAC 7d,Low,Dendritic_cells,Macrophages,DC cells,Macrophages,0,0
+20221010-2_6,TAC 7d,Low,B_cells,Macrophages,B cells,Macrophages,0,0
+20221010-2_6,TAC 7d,Low,Tumor_cells,Endothelial_cells,Tumor cells,Endothelial,0,0
+20221010-2_6,TAC 7d,Low,Macrophages,Endothelial_cells,Macrophages,Endothelial,0,0
+20221010-2_6,TAC 7d,Low,Endothelial_cells,Endothelial_cells,Endothelial,Endothelial,0,0
+20221010-2_6,TAC 7d,Low,Fibroblasts,Endothelial_cells,Fibroblasts,Endothelial,0,0
+20221010-2_6,TAC 7d,Low,T_cells,Endothelial_cells,T cells,Endothelial,0,0
+20221010-2_6,TAC 7d,Low,Dendritic_cells,Endothelial_cells,DC cells,Endothelial,0,0
+20221010-2_6,TAC 7d,Low,B_cells,Endothelial_cells,B cells,Endothelial,0,0
+20221010-2_6,TAC 7d,Low,Tumor_cells,Fibroblasts,Tumor cells,Fibroblasts,1.79209506615501,1.02679223380291
+20221010-2_6,TAC 7d,Low,Macrophages,Fibroblasts,Macrophages,Fibroblasts,26.5597870468746,3.31635771922426
+20221010-2_6,TAC 7d,Low,Endothelial_cells,Fibroblasts,Endothelial,Fibroblasts,0,0
+20221010-2_6,TAC 7d,Low,Fibroblasts,Fibroblasts,Fibroblasts,Fibroblasts,0,0
+20221010-2_6,TAC 7d,Low,T_cells,Fibroblasts,T cells,Fibroblasts,0,0
+20221010-2_6,TAC 7d,Low,Dendritic_cells,Fibroblasts,DC cells,Fibroblasts,0,0
+20221010-2_6,TAC 7d,Low,B_cells,Fibroblasts,B cells,Fibroblasts,0,0
+20221010-2_6,TAC 7d,Low,Tumor_cells,T_cells,Tumor cells,T cells,0,0
+20221010-2_6,TAC 7d,Low,Macrophages,T_cells,Macrophages,T cells,0,0
+20221010-2_6,TAC 7d,Low,Endothelial_cells,T_cells,Endothelial,T cells,0,0
+20221010-2_6,TAC 7d,Low,Fibroblasts,T_cells,Fibroblasts,T cells,0,0
+20221010-2_6,TAC 7d,Low,T_cells,T_cells,T cells,T cells,0,0
+20221010-2_6,TAC 7d,Low,Dendritic_cells,T_cells,DC cells,T cells,0,0
+20221010-2_6,TAC 7d,Low,B_cells,T_cells,B cells,T cells,0,0
+20221010-2_6,TAC 7d,Low,Tumor_cells,Dendritic_cells,Tumor cells,DC cells,0,0
+20221010-2_6,TAC 7d,Low,Macrophages,Dendritic_cells,Macrophages,DC cells,0,0
+20221010-2_6,TAC 7d,Low,Endothelial_cells,Dendritic_cells,Endothelial,DC cells,0,0
+20221010-2_6,TAC 7d,Low,Fibroblasts,Dendritic_cells,Fibroblasts,DC cells,0,0
+20221010-2_6,TAC 7d,Low,T_cells,Dendritic_cells,T cells,DC cells,0,0
+20221010-2_6,TAC 7d,Low,Dendritic_cells,Dendritic_cells,DC cells,DC cells,0,0
+20221010-2_6,TAC 7d,Low,B_cells,Dendritic_cells,B cells,DC cells,0,0
+20221010-2_6,TAC 7d,Low,Tumor_cells,B_cells,Tumor cells,B cells,0,0
+20221010-2_6,TAC 7d,Low,Macrophages,B_cells,Macrophages,B cells,0,0
+20221010-2_6,TAC 7d,Low,Endothelial_cells,B_cells,Endothelial,B cells,0,0
+20221010-2_6,TAC 7d,Low,Fibroblasts,B_cells,Fibroblasts,B cells,0,0
+20221010-2_6,TAC 7d,Low,T_cells,B_cells,T cells,B cells,0,0
+20221010-2_6,TAC 7d,Low,Dendritic_cells,B_cells,DC cells,B cells,0,0
+20221010-2_6,TAC 7d,Low,B_cells,B_cells,B cells,B cells,0,0
+20221010-2_8,Recurrent,Low,Tumor_cells,Tumor_cells,Tumor cells,Tumor cells,1931.53318707167,7.56658695344306
+20221010-2_8,Recurrent,Low,Macrophages,Tumor_cells,Macrophages,Tumor cells,0,0
+20221010-2_8,Recurrent,Low,Endothelial_cells,Tumor_cells,Endothelial,Tumor cells,0,0
+20221010-2_8,Recurrent,Low,Fibroblasts,Tumor_cells,Fibroblasts,Tumor cells,0,0
+20221010-2_8,Recurrent,Low,T_cells,Tumor_cells,T cells,Tumor cells,0,0
+20221010-2_8,Recurrent,Low,Dendritic_cells,Tumor_cells,DC cells,Tumor cells,0,0
+20221010-2_8,Recurrent,Low,B_cells,Tumor_cells,B cells,Tumor cells,0,0
+20221010-2_8,Recurrent,Low,Tumor_cells,Macrophages,Tumor cells,Macrophages,0,0
+20221010-2_8,Recurrent,Low,Macrophages,Macrophages,Macrophages,Macrophages,0,0
+20221010-2_8,Recurrent,Low,Endothelial_cells,Macrophages,Endothelial,Macrophages,0,0
+20221010-2_8,Recurrent,Low,Fibroblasts,Macrophages,Fibroblasts,Macrophages,0,0
+20221010-2_8,Recurrent,Low,T_cells,Macrophages,T cells,Macrophages,0,0
+20221010-2_8,Recurrent,Low,Dendritic_cells,Macrophages,DC cells,Macrophages,0,0
+20221010-2_8,Recurrent,Low,B_cells,Macrophages,B cells,Macrophages,0,0
+20221010-2_8,Recurrent,Low,Tumor_cells,Endothelial_cells,Tumor cells,Endothelial,0,0
+20221010-2_8,Recurrent,Low,Macrophages,Endothelial_cells,Macrophages,Endothelial,0,0
+20221010-2_8,Recurrent,Low,Endothelial_cells,Endothelial_cells,Endothelial,Endothelial,0,0
+20221010-2_8,Recurrent,Low,Fibroblasts,Endothelial_cells,Fibroblasts,Endothelial,0,0
+20221010-2_8,Recurrent,Low,T_cells,Endothelial_cells,T cells,Endothelial,0,0
+20221010-2_8,Recurrent,Low,Dendritic_cells,Endothelial_cells,DC cells,Endothelial,0,0
+20221010-2_8,Recurrent,Low,B_cells,Endothelial_cells,B cells,Endothelial,0,0
+20221010-2_8,Recurrent,Low,Tumor_cells,Fibroblasts,Tumor cells,Fibroblasts,0,0
+20221010-2_8,Recurrent,Low,Macrophages,Fibroblasts,Macrophages,Fibroblasts,0,0
+20221010-2_8,Recurrent,Low,Endothelial_cells,Fibroblasts,Endothelial,Fibroblasts,0,0
+20221010-2_8,Recurrent,Low,Fibroblasts,Fibroblasts,Fibroblasts,Fibroblasts,0,0
+20221010-2_8,Recurrent,Low,T_cells,Fibroblasts,T cells,Fibroblasts,0,0
+20221010-2_8,Recurrent,Low,Dendritic_cells,Fibroblasts,DC cells,Fibroblasts,0,0
+20221010-2_8,Recurrent,Low,B_cells,Fibroblasts,B cells,Fibroblasts,0,0
+20221010-2_8,Recurrent,Low,Tumor_cells,T_cells,Tumor cells,T cells,0,0
+20221010-2_8,Recurrent,Low,Macrophages,T_cells,Macrophages,T cells,0,0
+20221010-2_8,Recurrent,Low,Endothelial_cells,T_cells,Endothelial,T cells,0,0
+20221010-2_8,Recurrent,Low,Fibroblasts,T_cells,Fibroblasts,T cells,0,0
+20221010-2_8,Recurrent,Low,T_cells,T_cells,T cells,T cells,0,0
+20221010-2_8,Recurrent,Low,Dendritic_cells,T_cells,DC cells,T cells,0,0
+20221010-2_8,Recurrent,Low,B_cells,T_cells,B cells,T cells,0,0
+20221010-2_8,Recurrent,Low,Tumor_cells,Dendritic_cells,Tumor cells,DC cells,0,0
+20221010-2_8,Recurrent,Low,Macrophages,Dendritic_cells,Macrophages,DC cells,0,0
+20221010-2_8,Recurrent,Low,Endothelial_cells,Dendritic_cells,Endothelial,DC cells,0,0
+20221010-2_8,Recurrent,Low,Fibroblasts,Dendritic_cells,Fibroblasts,DC cells,0,0
+20221010-2_8,Recurrent,Low,T_cells,Dendritic_cells,T cells,DC cells,0,0
+20221010-2_8,Recurrent,Low,Dendritic_cells,Dendritic_cells,DC cells,DC cells,0,0
+20221010-2_8,Recurrent,Low,B_cells,Dendritic_cells,B cells,DC cells,0,0
+20221010-2_8,Recurrent,Low,Tumor_cells,B_cells,Tumor cells,B cells,0,0
+20221010-2_8,Recurrent,Low,Macrophages,B_cells,Macrophages,B cells,0,0
+20221010-2_8,Recurrent,Low,Endothelial_cells,B_cells,Endothelial,B cells,0,0
+20221010-2_8,Recurrent,Low,Fibroblasts,B_cells,Fibroblasts,B cells,0,0
+20221010-2_8,Recurrent,Low,T_cells,B_cells,T cells,B cells,0,0
+20221010-2_8,Recurrent,Low,Dendritic_cells,B_cells,DC cells,B cells,0,0
+20221010-2_8,Recurrent,Low,B_cells,B_cells,B cells,B cells,0,0
