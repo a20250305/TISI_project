@@ -1,0 +1,81 @@
+source_sample,displayed_row_label,displayed_row_order,panel,variable,rho,p_min,FDR,Variable_source,aggregation,sig,neglog10_FDR
+20221010-3_11,MRD-1,1,Neighbor major cell type,B_cells,-0.135191772577037,0.0315879529150698,0.0676884705322923,Bcell;Plasmacell,mean rho; minimum FDR across subtype variables,FALSE,1.16948529897543
+20221010-3_11,MRD-1,1,Neighbor major cell type,Dendritic_cells,-0.125817723516241,0.0455764479514516,0.0820172860851828,APC,mean rho; minimum FDR across subtype variables,FALSE,1.08609460541832
+20221010-3_11,MRD-1,1,Neighbor major cell type,Endothelial_cells,-0.0207006730286348,0.743161969355625,0.768788244160992,Endothelialcell,mean rho; minimum FDR across subtype variables,FALSE,0.114193266253983
+20221010-3_11,MRD-1,1,Neighbor major cell type,Fibroblasts,0.162218425800473,0.0097490297161683,0.0249991662915801,Fibroblast,mean rho; minimum FDR across subtype variables,TRUE,1.60207447456811
+20221010-3_11,MRD-1,1,Neighbor major cell type,Macrophages,0.162529016123939,0.00128832369998331,0.00429441233327771,CHMacrophage;InflMacrophage;Spp1Macrophage,mean rho; minimum FDR across subtype variables,TRUE,2.36709625857934
+20221010-3_11,MRD-1,1,Neighbor major cell type,T_cells,,,,CD4T;CD8T,mean rho; minimum FDR across subtype variables,FALSE,
+20221010-3_11,MRD-1,1,Neighbor major cell type,Tumor_cells,-0.187072591479012,0.0028149667165621,0.00844490014968631,Tumor_cells,mean rho; minimum FDR across subtype variables,TRUE,2.07340548104817
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_1,,,,Nbr_1,direct neighbor fraction correlation,FALSE,
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_10,0.125870882452025,0.0454844500406791,0.0820172860851828,Nbr_10,direct neighbor fraction correlation,FALSE,1.08609460541832
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_11,,,,Nbr_11,direct neighbor fraction correlation,FALSE,
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_12,0.0241673090857797,0.702048329324447,0.752194638561907,Nbr_12,direct neighbor fraction correlation,FALSE,0.123669766435126
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_13,-0.00847619490486573,0.893278501384777,0.893278501384777,Nbr_13,direct neighbor fraction correlation,FALSE,0.0490131180903543
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_2,0.123893076621283,0.0490137752412464,0.0820172860851828,Nbr_2,direct neighbor fraction correlation,FALSE,1.08609460541832
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_3,0.0770744592499946,0.221824282310029,0.289336020404386,Nbr_3,direct neighbor fraction correlation,FALSE,0.538597496220434
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_4,0.0432638791636896,0.493301486547164,0.576160579532256,Nbr_4,direct neighbor fraction correlation,FALSE,0.239456459136609
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_5,-0.214825619055651,0.000580975382896493,0.00245241649513209,Nbr_5,direct neighbor fraction correlation,TRUE,2.61040577143864
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_6,,,,Nbr_6,direct neighbor fraction correlation,FALSE,
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_7,0.0426621212004093,0.499339168927955,0.576160579532256,Nbr_7,direct neighbor fraction correlation,FALSE,0.239456459136609
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_8,0.161675555606576,0.00999966651663204,0.0249991662915801,Nbr_8,direct neighbor fraction correlation,TRUE,1.60207447456811
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_9,-0.248030388835243,6.65978637476707e-05,0.00049948397810753,Nbr_9,direct neighbor fraction correlation,TRUE,3.30147843803077
+20221010-2_7,MRD-2,2,Neighbor major cell type,B_cells,-0.138715835336279,0.197431024996251,0.407267223675304,Bcell;Plasmacell,mean rho; minimum FDR across subtype variables,FALSE,0.39012053995016
+20221010-2_7,MRD-2,2,Neighbor major cell type,Dendritic_cells,-0.0316546583463157,0.769694470772501,0.769694470772501,APC,mean rho; minimum FDR across subtype variables,FALSE,0.113681633255535
+20221010-2_7,MRD-2,2,Neighbor major cell type,Endothelial_cells,,,,Endothelialcell,mean rho; minimum FDR across subtype variables,FALSE,
+20221010-2_7,MRD-2,2,Neighbor major cell type,Fibroblasts,-0.0960235190296689,0.373487526328229,0.570059908606245,Fibroblast,mean rho; minimum FDR across subtype variables,FALSE,0.244079501152201
+20221010-2_7,MRD-2,2,Neighbor major cell type,Macrophages,0.0080937154429742,0.64028788841165,0.769694470772501,CHMacrophage;InflMacrophage;Spp1Macrophage,mean rho; minimum FDR across subtype variables,FALSE,0.113681633255535
+20221010-2_7,MRD-2,2,Neighbor major cell type,T_cells,,,,CD4T;CD8T,mean rho; minimum FDR across subtype variables,FALSE,
+20221010-2_7,MRD-2,2,Neighbor major cell type,Tumor_cells,0.0768027275857826,0.476945788448229,0.65296454829197,Tumor_cells,mean rho; minimum FDR across subtype variables,FALSE,0.18511039743722
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_1,,,,Nbr_1,direct neighbor fraction correlation,FALSE,
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_10,0.0736364254098799,0.495352415945633,0.65296454829197,Nbr_10,direct neighbor fraction correlation,FALSE,0.18511039743722
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_11,,,,Nbr_11,direct neighbor fraction correlation,FALSE,
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_12,-0.0342483683615071,0.751412511651962,0.769694470772501,Nbr_12,direct neighbor fraction correlation,FALSE,0.113681633255535
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_13,-0.122392967622412,0.25595308105855,0.436625844158702,Nbr_13,direct neighbor fraction correlation,FALSE,0.359890561702166
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_2,0.123089197356371,0.253237951005776,0.436625844158702,Nbr_2,direct neighbor fraction correlation,FALSE,0.359890561702166
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_3,0.100942784008051,0.349386022516257,0.562899702942859,Nbr_3,direct neighbor fraction correlation,FALSE,0.249568980528484
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_4,0.0381378275285798,0.724255245889953,0.769694470772501,Nbr_4,direct neighbor fraction correlation,FALSE,0.113681633255535
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_5,0.047097055138653,0.663029470554421,0.769694470772501,Nbr_5,direct neighbor fraction correlation,FALSE,0.113681633255535
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_6,,,,Nbr_6,direct neighbor fraction correlation,FALSE,
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_7,-0.387366352748822,0.000192592667728651,0.00139629684103272,Nbr_7,direct neighbor fraction correlation,TRUE,2.85502224452212
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_8,-0.136446782228937,0.204933450233117,0.407267223675304,Nbr_8,direct neighbor fraction correlation,FALSE,0.39012053995016
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_9,-0.229765516992184,0.0312815251793806,0.151194038367006,Nbr_9,direct neighbor fraction correlation,FALSE,0.820465332878175
+20220401-2_8,MRD-3,3,Neighbor major cell type,B_cells,-0.115963718164767,0.149413563411,0.240721852162166,Bcell;Plasmacell,mean rho; minimum FDR across subtype variables,FALSE,0.618484483706354
+20220401-2_8,MRD-3,3,Neighbor major cell type,Dendritic_cells,0.0326788701299358,0.68548888121591,0.828299064802557,APC,mean rho; minimum FDR across subtype variables,FALSE,0.0818128289843296
+20220401-2_8,MRD-3,3,Neighbor major cell type,Endothelial_cells,,,,Endothelialcell,mean rho; minimum FDR across subtype variables,FALSE,
+20220401-2_8,MRD-3,3,Neighbor major cell type,Fibroblasts,0.00147174946721306,0.985451927388863,0.985451927388863,Fibroblast,mean rho; minimum FDR across subtype variables,FALSE,0.00636455675132598
+20220401-2_8,MRD-3,3,Neighbor major cell type,Macrophages,0.0699107794843423,0.149283419655386,0.240721852162166,CHMacrophage;InflMacrophage;Spp1Macrophage,mean rho; minimum FDR across subtype variables,FALSE,0.618484483706354
+20220401-2_8,MRD-3,3,Neighbor major cell type,T_cells,-0.0987697154309841,0.219930192624524,0.318898779305559,CD4T;CD8T,mean rho; minimum FDR across subtype variables,FALSE,0.496347143164926
+20220401-2_8,MRD-3,3,Neighbor major cell type,Tumor_cells,-0.178010939697054,0.0261981156374132,0.0759745353484982,Tumor_cells,mean rho; minimum FDR across subtype variables,FALSE,1.11933194733489
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_1,,,,Nbr_1,direct neighbor fraction correlation,FALSE,
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_10,0.142078872118296,0.0768472622762201,0.159183614715027,Nbr_10,direct neighbor fraction correlation,FALSE,0.798101637635247
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_11,,,,Nbr_11,direct neighbor fraction correlation,FALSE,
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_12,0.168123393978853,0.0359113974327665,0.0926015051618471,Nbr_12,direct neighbor fraction correlation,FALSE,1.03338195415854
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_13,-0.147514148100008,0.0661066162546211,0.147468605491078,Nbr_13,direct neighbor fraction correlation,FALSE,0.831300426554973
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_2,0.185643684217427,0.020327498079924,0.0654997160353107,Nbr_2,direct neighbor fraction correlation,FALSE,1.183760582826
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_3,0.00575562277592073,0.943150928618472,0.976834890354846,Nbr_3,direct neighbor fraction correlation,FALSE,0.0101788367597669
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_4,,,,Nbr_4,direct neighbor fraction correlation,FALSE,
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_5,-0.254912273034962,0.00132057275689088,0.00478707624372944,Nbr_5,direct neighbor fraction correlation,TRUE,2.31992965545783
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_6,,,,Nbr_6,direct neighbor fraction correlation,FALSE,
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_7,,,,Nbr_7,direct neighbor fraction correlation,FALSE,
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_8,0.034252105914144,0.671206595847283,0.828299064802557,Nbr_8,direct neighbor fraction correlation,FALSE,0.0818128289843296
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_9,-0.116699543818449,0.146831035755673,0.240721852162166,Nbr_9,direct neighbor fraction correlation,FALSE,0.618484483706354
+20220401-1_3,MRD-4,4,Neighbor major cell type,B_cells,-0.165198607291167,0.0260397736207029,0.0883819279323703,Bcell;Plasmacell,mean rho; minimum FDR across subtype variables,FALSE,1.05363652912293
+20220401-1_3,MRD-4,4,Neighbor major cell type,Dendritic_cells,-0.0391237945027869,0.622192102977209,0.678407758198032,APC,mean rho; minimum FDR across subtype variables,FALSE,0.168509194178039
+20220401-1_3,MRD-4,4,Neighbor major cell type,Endothelial_cells,,,,Endothelialcell,mean rho; minimum FDR across subtype variables,FALSE,
+20220401-1_3,MRD-4,4,Neighbor major cell type,Fibroblasts,-0.0247375299541789,0.755431179865524,0.755431179865524,Fibroblast,mean rho; minimum FDR across subtype variables,FALSE,0.121805093953705
+20220401-1_3,MRD-4,4,Neighbor major cell type,Macrophages,0.0422049629211654,0.00821416796431035,0.0318299008617026,CHMacrophage;InflMacrophage;Spp1Macrophage,mean rho; minimum FDR across subtype variables,TRUE,1.4971647140426
+20220401-1_3,MRD-4,4,Neighbor major cell type,T_cells,-0.0633010502143083,0.425020027419657,0.597649153323088,CD4T;CD8T,mean rho; minimum FDR across subtype variables,FALSE,0.223553691415008
+20220401-1_3,MRD-4,4,Neighbor major cell type,Tumor_cells,-0.037732211902985,0.634639515733642,0.678407758198032,Tumor_cells,mean rho; minimum FDR across subtype variables,FALSE,0.168509194178039
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_1,,,,Nbr_1,direct neighbor fraction correlation,FALSE,
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_10,-0.0753851163300024,0.341893814328218,0.588817124676376,Nbr_10,direct neighbor fraction correlation,FALSE,0.230019567820854
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_11,,,,Nbr_11,direct neighbor fraction correlation,FALSE,
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_12,-0.0880174163660504,0.266882670584192,0.517085174256871,Nbr_12,direct neighbor fraction correlation,FALSE,0.286437914037513
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_13,-0.0639765986831607,0.420085315511047,0.597649153323088,Nbr_13,direct neighbor fraction correlation,FALSE,0.223553691415008
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_2,0.107039368572375,0.176541482316857,0.369398275761198,Nbr_2,direct neighbor fraction correlation,FALSE,0.432505136045601
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_3,0.0341090678026131,0.667524248483623,0.68977505676641,Nbr_3,direct neighbor fraction correlation,FALSE,0.161292514382327
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_4,,,,Nbr_4,direct neighbor fraction correlation,FALSE,
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_5,0.0633798186208912,0.424442922495232,0.597649153323088,Nbr_5,direct neighbor fraction correlation,FALSE,0.223553691415008
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_6,,,,Nbr_6,direct neighbor fraction correlation,FALSE,
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_7,-0.0782475890055738,0.323824975069859,0.588817124676376,Nbr_7,direct neighbor fraction correlation,FALSE,0.230019567820854
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_8,0.168889713429257,0.03221909909804,0.0907992792762944,Nbr_8,direct neighbor fraction correlation,FALSE,1.04191759869886
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_9,0.0646405493456119,0.415267971295603,0.597649153323088,Nbr_9,direct neighbor fraction correlation,FALSE,0.223553691415008
