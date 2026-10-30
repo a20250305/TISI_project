@@ -1,0 +1,151 @@
+sample_id,cancer_type,agent_category,cell_line
+SRR25572079,Glioma,Radiation,SNB19
+SRR25572080,Glioma,Radiation,SNB19
+SRR25572081,Glioma,Radiation,SNB19
+SRR25572097,Glioma,Radiation,SF268
+SRR25572098,Glioma,Radiation,SF268
+SRR25572099,Glioma,Radiation,SF268
+SRR25572115,Glioma,Radiation,A172
+SRR25572116,Glioma,Radiation,A172
+SRR25572117,Glioma,Radiation,A172
+SRR25572133,Glioma,Radiation,U87
+SRR25572134,Glioma,Radiation,U87
+SRR25572135,Glioma,Radiation,U87
+SRR29763222,Glioma,Radiation,LN229
+SRR29763223,Glioma,Radiation,LN229
+SRR29763224,Glioma,Radiation,LN229
+SRR29763227,Glioma,Radiation,A172
+SRR29763228,Glioma,Radiation,A172
+SRR29763230,Glioma,Radiation,A172
+SRR32566241,Glioma,Radiation,SU-DIPG-IV
+SRR32566244,Glioma,Radiation,SU-DIPG-IV
+SRR32566247,Glioma,Radiation,HSJD-DIPG-007
+SRR32566250,Glioma,Radiation,HSJD-DIPG-007
+SRR32566253,Glioma,Radiation,ICR-B117
+SRR32566256,Glioma,Radiation,ICR-B117
+SRR12740614,Osteosarcoma,Radiation,U2OS
+SRR12740615,Osteosarcoma,Radiation,U2OS
+SRR12740616,Osteosarcoma,Radiation,U2OS
+SRR12740617,Osteosarcoma,Radiation,U2OS
+SRR12740618,Osteosarcoma,Radiation,U2OS
+ERR5023187,Colorectal cancer,Mitotic kinase inhibitor,HCT116
+ERR5023188,Colorectal cancer,Mitotic kinase inhibitor,HCT116
+ERR5023207,Colorectal cancer,Mitotic kinase inhibitor,LoVo
+ERR5023208,Colorectal cancer,Mitotic kinase inhibitor,LoVo
+ERR5023228,Colorectal cancer,Mitotic kinase inhibitor,RKO
+ERR5023229,Colorectal cancer,Mitotic kinase inhibitor,RKO
+ERR5023212,HR+ Breast cancer,Mitotic kinase inhibitor,MCF-7
+ERR5023238,HR+ Breast cancer,Mitotic kinase inhibitor,T47D
+ERR5023239,HR+ Breast cancer,Mitotic kinase inhibitor,T47D
+ERR5023192,Liver cancer,Mitotic kinase inhibitor,Hep3B
+ERR5023193,Liver cancer,Mitotic kinase inhibitor,Hep3B
+ERR5023197,Liver cancer,Mitotic kinase inhibitor,HepG2
+ERR5023198,Liver cancer,Mitotic kinase inhibitor,HepG2
+ERR5023202,Liver cancer,Mitotic kinase inhibitor,HuH-7
+ERR5023203,Liver cancer,Mitotic kinase inhibitor,HuH-7
+ERR5023183,Lung cancer,Mitotic kinase inhibitor,A549
+ERR5023184,Lung cancer,Mitotic kinase inhibitor,A549
+ERR5023220,Lung cancer,Mitotic kinase inhibitor,NCI-H358
+ERR5023223,Lung cancer,Mitotic kinase inhibitor,PC-9
+ERR5023224,Lung cancer,Mitotic kinase inhibitor,PC-9
+SRR5931955,Lung cancer,Mitotic kinase inhibitor,A549
+SRR5931956,Lung cancer,Mitotic kinase inhibitor,A549
+SRR5931959,Lung cancer,Mitotic kinase inhibitor,A549
+SRR5931960,Lung cancer,Mitotic kinase inhibitor,A549
+ERR5023215,TN Breast cancer,Mitotic kinase inhibitor,MDA-MB-231
+ERR5023216,TN Breast cancer,Mitotic kinase inhibitor,MDA-MB-231
+ERR5023233,TN Breast cancer,Mitotic kinase inhibitor,SUM159PT
+ERR5023234,TN Breast cancer,Mitotic kinase inhibitor,SUM159PT
+ERR5023189,Colorectal cancer,Chemotherapy,HCT116
+ERR5023209,Colorectal cancer,Chemotherapy,LoVo
+ERR5023230,Colorectal cancer,Chemotherapy,RKO
+GSM7088294,DLBCL,Chemotherapy,DB
+GSM7088296,DLBCL,Chemotherapy,Karpas-422
+GSM7088298,DLBCL,Chemotherapy,RC-K8
+GSM7088300,DLBCL,Chemotherapy,SU-DHL10
+GSM7088302,DLBCL,Chemotherapy,U2932
+GSM7088304,DLBCL,Chemotherapy,WSU-DLCL2
+SRR25572085,Glioma,Chemotherapy,SNB19
+SRR25572086,Glioma,Chemotherapy,SNB19
+SRR25572087,Glioma,Chemotherapy,SNB19
+SRR25572103,Glioma,Chemotherapy,SF268
+SRR25572104,Glioma,Chemotherapy,SF268
+SRR25572105,Glioma,Chemotherapy,SF268
+SRR25572121,Glioma,Chemotherapy,A172
+SRR25572122,Glioma,Chemotherapy,A172
+SRR25572123,Glioma,Chemotherapy,A172
+SRR25572139,Glioma,Chemotherapy,U87
+SRR25572140,Glioma,Chemotherapy,U87
+SRR25572141,Glioma,Chemotherapy,U87
+ERR5023213,HR+ Breast cancer,Chemotherapy,MCF-7
+ERR5023240,HR+ Breast cancer,Chemotherapy,T47D
+SRR32118575,HR+ Breast cancer,Chemotherapy,T47D
+SRR32118576,HR+ Breast cancer,Chemotherapy,T47D
+SRR32118577,HR+ Breast cancer,Chemotherapy,T47D
+SRR32118578,HR+ Breast cancer,Chemotherapy,MCF-7
+SRR32118579,HR+ Breast cancer,Chemotherapy,MCF-7
+SRR32118580,HR+ Breast cancer,Chemotherapy,MCF-7
+SRR2891500,Liposarcoma,Chemotherapy,LS8817
+SRR2891501,Liposarcoma,Chemotherapy,LS8817
+SRR2891502,Liposarcoma,Chemotherapy,LS8817
+ERR5023194,Liver cancer,Chemotherapy,Hep3B
+ERR5023199,Liver cancer,Chemotherapy,HepG2
+ERR5023204,Liver cancer,Chemotherapy,HuH-7
+ERR5023185,Lung cancer,Chemotherapy,A549
+ERR5023221,Lung cancer,Chemotherapy,NCI-H358
+ERR5023225,Lung cancer,Chemotherapy,PC-9
+SRR26623029,Lung cancer,Chemotherapy,A549
+SRR26623034,Lung cancer,Chemotherapy,A549
+SRR26623037,Lung cancer,Chemotherapy,A549
+SRR26623042,Lung cancer,Chemotherapy,A549
+SRR5931961,Lung cancer,Chemotherapy,A549
+SRR5931962,Lung cancer,Chemotherapy,A549
+SRR26623014,Melanoma,Chemotherapy,SK-MEL-147
+SRR26623018,Melanoma,Chemotherapy,SK-MEL-147
+SRR26623021,Melanoma,Chemotherapy,SK-MEL-147
+SRR26623026,Melanoma,Chemotherapy,SK-MEL-147
+SRR26453958,Angiosarcoma,Chemotherapy,ISO-HAS-B
+SRR26453959,Angiosarcoma,Chemotherapy,ISO-HAS-B
+SRR26453960,Angiosarcoma,Chemotherapy,ISO-HAS-B
+SRR26453964,Angiosarcoma,Chemotherapy,MO-LAS-B
+SRR26453965,Angiosarcoma,Chemotherapy,MO-LAS-B
+SRR26453966,Angiosarcoma,Chemotherapy,MO-LAS-B
+SRR26453967,Angiosarcoma,Chemotherapy,MO-LAS-B
+ERR5023217,TN Breast cancer,Chemotherapy,MDA-MB-231
+ERR5023235,TN Breast cancer,Chemotherapy,SUM159PT
+SRR32118573,TN Breast cancer,Chemotherapy,MDA-MB-231
+SRR32118574,TN Breast cancer,Chemotherapy,MDA-MB-231
+SRR32118600,TN Breast cancer,Chemotherapy,Hs578T
+SRR32118601,TN Breast cancer,Chemotherapy,Hs578T
+SRR32118602,TN Breast cancer,Chemotherapy,Hs578T
+SRR32118603,TN Breast cancer,Chemotherapy,MDA-MB-231
+SRR32118604,TN Breast cancer,Chemotherapy,MDA-MB-231
+SRR2891503,Liposarcoma,Cell cycle inhibitor,LS8817
+SRR2891504,Liposarcoma,Cell cycle inhibitor,LS8817
+SRR2891505,Liposarcoma,Cell cycle inhibitor,LS8817
+SRR8060846,Liver cancer,Cell cycle inhibitor,Hep3B
+SRR8060848,Liver cancer,Cell cycle inhibitor,HuH-7
+SRR8956968,Liver cancer,Cell cycle inhibitor,Hep1
+SRR26623030,Lung cancer,Cell cycle inhibitor,A549
+SRR26623035,Lung cancer,Cell cycle inhibitor,A549
+SRR26623038,Lung cancer,Cell cycle inhibitor,A549
+SRR26623043,Lung cancer,Cell cycle inhibitor,A549
+SRR6702555,Lung cancer,Cell cycle inhibitor,A549
+SRR6702559,Lung cancer,Cell cycle inhibitor,A549
+SRR6702563,Lung cancer,Cell cycle inhibitor,H2030
+SRR6702567,Lung cancer,Cell cycle inhibitor,H2030
+SRR6702571,Lung cancer,Cell cycle inhibitor,H460
+SRR6702575,Lung cancer,Cell cycle inhibitor,H460
+GSM6333525,Melanoma,Cell cycle inhibitor,SK-MEL-103
+GSM6333527,Melanoma,Cell cycle inhibitor,SK-MEL-103
+GSM6333529,Melanoma,Cell cycle inhibitor,SK-MEL-103
+SRR26623015,Melanoma,Cell cycle inhibitor,SK-MEL-147
+SRR26623019,Melanoma,Cell cycle inhibitor,SK-MEL-147
+SRR26623022,Melanoma,Cell cycle inhibitor,SK-MEL-147
+SRR26623027,Melanoma,Cell cycle inhibitor,SK-MEL-147
+SRR6702582,Pancreatic cancer,Cell cycle inhibitor,PU-8988T
+SRR6702583,Pancreatic cancer,Cell cycle inhibitor,PU-8988T
+SRR6702590,Pancreatic cancer,Cell cycle inhibitor,PANC-1
+SRR6702591,Pancreatic cancer,Cell cycle inhibitor,PANC-1
+SRR6702596,Pancreatic cancer,Cell cycle inhibitor,MiaPaca2
+SRR6702597,Pancreatic cancer,Cell cycle inhibitor,MiaPaca2

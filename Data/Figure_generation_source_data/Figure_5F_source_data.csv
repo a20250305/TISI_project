@@ -1,0 +1,81 @@
+source_sample,displayed_row_label,displayed_row_order,panel,variable,rho,neglog10_FDR
+20221010-3_11,MRD-1,1,Neighbor major cell type,B_cells,-0.135191773,1.169485299
+20221010-3_11,MRD-1,1,Neighbor major cell type,Dendritic_cells,-0.125817724,1.086094605
+20221010-3_11,MRD-1,1,Neighbor major cell type,Endothelial_cells,-0.020700673,0.114193266
+20221010-3_11,MRD-1,1,Neighbor major cell type,Fibroblasts,0.162218426,1.602074475
+20221010-3_11,MRD-1,1,Neighbor major cell type,Macrophages,0.162529016,2.367096259
+20221010-3_11,MRD-1,1,Neighbor major cell type,T_cells,,
+20221010-3_11,MRD-1,1,Neighbor major cell type,Tumor_cells,-0.187072591,2.073405481
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_1,,
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_10,0.125870882,1.086094605
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_11,,
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_12,0.024167309,0.123669766
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_13,-0.008476195,0.049013118
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_2,0.123893077,1.086094605
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_3,0.077074459,0.538597496
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_4,0.043263879,0.239456459
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_5,-0.214825619,2.610405771
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_6,,
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_7,0.042662121,0.239456459
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_8,0.161675556,1.602074475
+20221010-3_11,MRD-1,1,Neighbor niche,Niche_9,-0.248030389,3.301478438
+20221010-2_7,MRD-2,2,Neighbor major cell type,B_cells,-0.138715835,0.39012054
+20221010-2_7,MRD-2,2,Neighbor major cell type,Dendritic_cells,-0.031654658,0.113681633
+20221010-2_7,MRD-2,2,Neighbor major cell type,Endothelial_cells,,
+20221010-2_7,MRD-2,2,Neighbor major cell type,Fibroblasts,-0.096023519,0.244079501
+20221010-2_7,MRD-2,2,Neighbor major cell type,Macrophages,0.008093715,0.113681633
+20221010-2_7,MRD-2,2,Neighbor major cell type,T_cells,,
+20221010-2_7,MRD-2,2,Neighbor major cell type,Tumor_cells,0.076802728,0.185110397
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_1,,
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_10,0.073636425,0.185110397
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_11,,
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_12,-0.034248368,0.113681633
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_13,-0.122392968,0.359890562
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_2,0.123089197,0.359890562
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_3,0.100942784,0.249568981
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_4,0.038137828,0.113681633
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_5,0.047097055,0.113681633
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_6,,
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_7,-0.387366353,2.855022245
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_8,-0.136446782,0.39012054
+20221010-2_7,MRD-2,2,Neighbor niche,Niche_9,-0.229765517,0.820465333
+20220401-2_8,MRD-3,3,Neighbor major cell type,B_cells,-0.115963718,0.618484484
+20220401-2_8,MRD-3,3,Neighbor major cell type,Dendritic_cells,0.03267887,0.081812829
+20220401-2_8,MRD-3,3,Neighbor major cell type,Endothelial_cells,,
+20220401-2_8,MRD-3,3,Neighbor major cell type,Fibroblasts,0.001471749,0.006364557
+20220401-2_8,MRD-3,3,Neighbor major cell type,Macrophages,0.069910779,0.618484484
+20220401-2_8,MRD-3,3,Neighbor major cell type,T_cells,-0.098769715,0.496347143
+20220401-2_8,MRD-3,3,Neighbor major cell type,Tumor_cells,-0.17801094,1.119331947
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_1,,
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_10,0.142078872,0.798101638
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_11,,
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_12,0.168123394,1.033381954
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_13,-0.147514148,0.831300427
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_2,0.185643684,1.183760583
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_3,0.005755623,0.010178837
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_4,,
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_5,-0.254912273,2.319929655
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_6,,
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_7,,
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_8,0.034252106,0.081812829
+20220401-2_8,MRD-3,3,Neighbor niche,Niche_9,-0.116699544,0.618484484
+20220401-1_3,MRD-4,4,Neighbor major cell type,B_cells,-0.165198607,1.053636529
+20220401-1_3,MRD-4,4,Neighbor major cell type,Dendritic_cells,-0.039123795,0.168509194
+20220401-1_3,MRD-4,4,Neighbor major cell type,Endothelial_cells,,
+20220401-1_3,MRD-4,4,Neighbor major cell type,Fibroblasts,-0.02473753,0.121805094
+20220401-1_3,MRD-4,4,Neighbor major cell type,Macrophages,0.042204963,1.497164714
+20220401-1_3,MRD-4,4,Neighbor major cell type,T_cells,-0.06330105,0.223553691
+20220401-1_3,MRD-4,4,Neighbor major cell type,Tumor_cells,-0.037732212,0.168509194
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_1,,
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_10,-0.075385116,0.230019568
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_11,,
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_12,-0.088017416,0.286437914
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_13,-0.063976599,0.223553691
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_2,0.107039369,0.432505136
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_3,0.034109068,0.161292514
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_4,,
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_5,0.063379819,0.223553691
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_6,,
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_7,-0.078247589,0.230019568
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_8,0.168889713,1.041917599
+20220401-1_3,MRD-4,4,Neighbor niche,Niche_9,0.064640549,0.223553691

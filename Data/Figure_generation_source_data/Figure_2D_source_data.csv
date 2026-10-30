@@ -1,0 +1,11 @@
+group,replicate,value
+Control,1,0
+Control,2,1
+Control,3,5
+Control,4,0
+Control,5,3.3
+TIS,1,80
+TIS,2,85
+TIS,3,90
+TIS,4,75
+TIS,5,70

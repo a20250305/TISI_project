@@ -1,0 +1,13 @@
+cancer_type,total_n,control_n,sene_n
+Colorectal cancer,15,6,9
+DLBCL,12,6,6
+Glioma,60,24,36
+HR+ Breast cancer,20,9,11
+Liposarcoma,9,3,6
+Liver cancer,21,9,12
+Lung cancer,46,16,30
+Melanoma,18,7,11
+Osteosarcoma,10,5,5
+Pancreatic cancer,12,6,6
+Angiosarcoma,11,4,7
+TN Breast cancer,24,11,13
