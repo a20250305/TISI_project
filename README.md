@@ -6,7 +6,7 @@
 
 The Therapy-Induced Senescence Index (TISI) is a transcriptome-wide, OCLR-derived score developed to characterize transcriptional states associated with therapy-induced senescence (TIS) across cancer contexts. This repository provides a **validated worked example for applying a pretrained TISI model**, model-development scripts, selected benchmark and figure-generation scripts, and supporting data files.
 
-**Start here:** [TISI worked tutorial](TISI_Tutorial/README.md). The tutorial is for **inference with a pretrained model**, not retraining or complete reproduction of every analysis in the manuscript.
+**Start here:** [TISI worked tutorial](TISI_Tutorial/README.md). This step-by-step tutorial demonstrates how to calculate TISI scores from transcriptomic data using the pretrained TISI model, including data preprocessing, gene matching, score calculation, visualization, and interpretation.
 
 ## Repository map
 
