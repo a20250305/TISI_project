@@ -317,14 +317,15 @@ stopifnot(max_abs_error <= 1e-10)
 cat("Maximum absolute error:", format(max_abs_error, scientific = TRUE), "\n")
 ```
 
-**Important reproducibility note.** The original Figure 2E analysis scored all
+**Important reproducibility note.** The original Figure 2F analysis scored all
 12 GSE189764 samples before selecting the six displayed samples. Because the
 original normalization and min-max scaling depend on the columns included in a
 calculation, the six-sample tutorial values are expected to differ slightly
-from the six Figure 2E values. The tutorial deliberately uses exactly six
-shipped samples so that a new user can run the example without hidden samples;
-the algorithm and pretrained weights are unchanged. To reproduce Figure 2E
-numerically, run the same functions on the complete 12-sample matrix.
+from the six Figure 2F values. Figure 2E is a separate C12-FDG flow-cytometry/
+MFI panel. The tutorial deliberately uses exactly six shipped samples so that a
+new user can run the example without hidden samples; the algorithm and
+pretrained weights are unchanged. To reproduce Figure 2F numerically, run the
+same functions on the complete 12-sample matrix.
 
 ## 6. Visualize and export the example
 
