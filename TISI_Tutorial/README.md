@@ -48,12 +48,13 @@ TISI_raw is the weighted dot-product score. TISI_scaled is a dataset-level
 transcriptional state relative to the samples used for that calculation. The
 score is not a probability and is not a universal clinical cutoff.
 
-The original Figure 2E used all 12 GSE189764 samples during normalization and
-min-max scaling before displaying the six samples. The tutorial intentionally
-ships only the required 3+3 samples, so its six-sample scaled values differ
-slightly from the Figure 2E values. This reflects dataset-dependent scaling,
-not a change in the TISI model. Use the complete 12-sample matrix to reproduce
-Figure 2E numerically.
+The original Figure 2F is the GSE189764 RNA-seq TISI analysis and used all 12
+GSE189764 samples during normalization and min-max scaling before displaying
+the six samples. Figure 2E is a separate C12-FDG flow-cytometry/MFI panel. The
+tutorial intentionally ships only the required 3+3 samples, so its six-sample
+scaled values differ slightly from the Figure 2F values. This reflects
+dataset-dependent scaling, not a change in the TISI model. Use the complete
+12-sample matrix to reproduce Figure 2F numerically.
 
 ## Model training versus inference
 
