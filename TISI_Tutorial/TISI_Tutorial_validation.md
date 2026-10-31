@@ -42,11 +42,12 @@ expression-file provenance.
 
 ## Scientific note
 
-Figure 2E was generated after normalization and min-max scaling of all 12
-GSE189764 samples, whereas this public worked example intentionally ships only
-the required 3+3 samples. The tutorial documents this dataset-dependent
-scaling difference and does not claim that the six-sample scaled values are
-identical to the Figure 2E values.
+Figure 2F is the GSE189764 RNA-seq TISI analysis and was generated after
+normalization and min-max scaling of all 12 GSE189764 samples, whereas this
+public worked example intentionally ships only the required 3+3 samples.
+Figure 2E is a separate C12-FDG flow-cytometry/MFI panel. The tutorial
+documents this dataset-dependent scaling difference and does not claim that
+the six-sample scaled values are identical to the Figure 2F values.
 
 This tutorial addresses the worked-usage/vignette request. It does not by
 itself provide the separate downstream-analysis and complete manuscript
